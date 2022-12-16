@@ -1,0 +1,12 @@
+<h2>Nice to meet you Hungry, I'm Dad</h2>
+<p>(a Node powered chat-bot built with Angular that tells dad jokes, thanks <a
+    href="https://github.com/mikemcbride/dad-jokes/">@mikemcbride</a> for the jokes)</p>
+<p>Connects via websocket to a server deployed to Heroku, pure node/HTML frontend version at <a href="https://sleepy-reef-66846.herokuapp.com/chat.html" target="_blank">https://sleepy-reef-66846.herokuapp.com/chat.html</a></p>
+<form id="new-chat-form">
+  <label for="new-chat">Talk to me</label>
+  <input [(ngModel)]="newText" type="text" name="text" >
+  <button>Send</button>
+</form>
+<ul id="chat-responses">
+  <li *ngFor="let message of messages; index as i;">{{message.name}}: {{message.data}}</li>
+</ul>
